@@ -7,14 +7,16 @@ public class App {
         Game pig = new Game( new Player[] { 
             new HumanPlayer(), 
             new ComputerPlayer(),
-            new ReinerKnizia()} );
+            new ReinerKnizia(),
+            new ScoreSensitivePlayer()
+        });
 
         do {
             pig.executeRound();
         } while (pig.DeclareWinner() == null) ;
 
         Player winner = pig.DeclareWinner();
-        System.out.println("The winner is "+winner.getName());
+        System.out.println("The winner is "+winner.getName() + "!");
         System.out.println();
     }
 

@@ -4,6 +4,7 @@ public class ComputerPlayer implements Player {
      * A simple computer player that always rolls the die twice.
      * @return the string "Computer"
      */
+    public int rolls = 2; 
     @Override
     public String getName() {
         return "Computer";
@@ -17,8 +18,9 @@ public class ComputerPlayer implements Player {
      */
     @Override
     public PlayerTurn executeTurn(PlayerTurn turn) {
-        turn.rollDice() ;
-        turn.rollDice() ;
+        for ( int i = 1; i <= rolls; i++){
+            turn.rollDice();
+        }
         return turn;
     }
     

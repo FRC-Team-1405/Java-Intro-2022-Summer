@@ -8,7 +8,8 @@ public class App {
             new HumanPlayer(), 
             new ComputerPlayer(),
             new ReinerKnizia(),
-            new ScoreSensitivePlayer()
+            new ScoreSensitivePlayer(),
+            new RandomPlayer()
         });
 
         do {
